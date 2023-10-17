@@ -1,0 +1,11 @@
+Una socket è un insieme di due campi(ID, Numero di porta).
+Per capire meglio il concetto di socket in java, prendiamo come punto di riferimento la struttura client e server.
+Il server fornisce e gestisce n servizi a n client, il client quando esegue una richiesta al server deve avere:
+- ID server -> Identifica su quale server si andra a fare la richiesta.
+- Numero di porta -> Identifica un processo all'interno della rete.
+Il client per ogni porta lascia in ascolto un Thread, in modo di andare a gestire:
+- La richiesta di ogni porta da 0 a 65535
+- In caso in cui una porta sia richiesta da più client, in base alla richiesta, il client può essere reindirizzato in un'altra porta,
+  oppure, più richieste possono essere gestite nella stessa porta aumentando il numero di thread in ascolto su di essa.
+
+In sintesi le socket permettono d'identificare una macchina in rete e un processo al suo interno.
